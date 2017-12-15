@@ -40,7 +40,7 @@ public abstract class Moteur {
 	}
 	
 	public String toString() { // Retourne la description du moteur
-		return "\tMoteur "+this.getType()+"de "+this.cylindre;
+		return " Moteur "+this.getType()+"de "+this.cylindre;
 	}
 
 }
