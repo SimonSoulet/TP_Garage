@@ -1,5 +1,6 @@
 package com.vehicules;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import com.enumerations.MarqueVehicule;
 import com.moteurs.Moteur;
 import com.options.OptionsVehicule;
 
-public class Vehicule {
+public class Vehicule implements Serializable {
 	
 	protected double prix;
 	protected String nom;
@@ -54,9 +55,9 @@ public class Vehicule {
 		Options.add(opt);
 	}
 	
-	public String toString() {
-		String str = "\tNouvelle voiture "+this.getMarque()+" : "+this.getNom()+" avec "+moteur.toString()+" ("+this.getPrix()+"€) ";
-		
+	public String toString() { //Description détaillée du véhicule (Methode appelé qui s'ecriera dans le fichier Garage.txt)
+		String str = "\tNouvelle voiture "+getMarque()+" : "+getNom()+" avec "+moteur.toString()+" ("+getPrix()+"€)";
+		return str;
 		
 	}
 

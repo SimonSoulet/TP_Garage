@@ -1,8 +1,10 @@
 package com.moteurs;
 
+import java.io.Serializable;
+
 import com.enumerations.TypeMoteur;
 
-public abstract class Moteur {
+public abstract class Moteur implements Serializable {
 	
 	protected TypeMoteur type;
 	protected String cylindre;
@@ -40,7 +42,7 @@ public abstract class Moteur {
 	}
 	
 	public String toString() { // Retourne la description du moteur
-		return " Moteur "+this.getType()+"de "+this.cylindre;
+		return " Moteur "+getType()+" de "+this.cylindre;
 	}
 
 }
