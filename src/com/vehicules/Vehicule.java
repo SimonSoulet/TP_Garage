@@ -55,7 +55,7 @@ public class Vehicule {
 	}
 	
 	public String toString() {
-		String str = "\t+ Voiture "+this.getMarque()+" : "+this.getNom()+" avec "+moteur.toString()+" ("+this.getPrix()+"€) ";
+		String str = "\tNouvelle voiture "+this.getMarque()+" : "+this.getNom()+" avec "+moteur.toString()+" ("+this.getPrix()+"€) ";
 		
 		
 	}
