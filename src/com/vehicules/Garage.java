@@ -2,7 +2,6 @@ package com.vehicules;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -29,6 +28,8 @@ public class Garage {
 		ObjectInputStream ois;   
 		ObjectOutputStream oos; //On déclare les objets en dehors du bloc try/catch
 		
+		String file = "Garage.txt";
+		
 		try {
 			oos = new ObjectOutputStream(
 					 new BufferedOutputStream(
@@ -49,30 +50,31 @@ public class Garage {
 							new FileInputStream(
 									new File("Garage.txt"))));
 			
-			try {
-				System.out.println("********************");
-				System.out.println("      Garage");
-				System.out.println("********************");
-				System.out.println((ois.readObject()).toString());
-				System.out.println((ois.readObject()).toString());
-				System.out.println((ois.readObject()).toString());
-				System.out.println((ois.readObject()).toString());
-				System.out.println((ois.readObject()).toString());
-				System.out.println((ois.readObject()).toString());
+			System.out.println("********************");
+			System.out.println("      Garage");
+			System.out.println("********************");
+			
+			while (file != "") {
 				
-			}catch (ClassNotFoundException e) {
-				e.printStackTrace();
+					try {
+					
+					System.out.println(((Vehicule)ois.readObject()).toString());
+				
+					}catch (ClassNotFoundException e) {
+						e.printStackTrace();
+					}
+			
+				ois.close(); //On ferme le flux
 			}
 			
-			ois.close(); //On ferme le flux
+			}catch (FileNotFoundException e) {
+				e.printStackTrace();
 			
-		}catch (FileNotFoundException e) {
-			e.printStackTrace();
-			
-		}catch (IOException e) {
-			e.printStackTrace();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
+				
 		}
-			
+				
 	}
 
-}
