@@ -2,6 +2,7 @@ package com.vehicules;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -52,7 +53,12 @@ public class Garage {
 				System.out.println("********************");
 				System.out.println("      Garage");
 				System.out.println("********************");
-				System.out.println(((Vehicule)ois.readObject()).toString());
+				System.out.println((ois.readObject()).toString());
+				System.out.println((ois.readObject()).toString());
+				System.out.println((ois.readObject()).toString());
+				System.out.println((ois.readObject()).toString());
+				System.out.println((ois.readObject()).toString());
+				System.out.println((ois.readObject()).toString());
 				
 			}catch (ClassNotFoundException e) {
 				e.printStackTrace();
@@ -66,7 +72,6 @@ public class Garage {
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 			
 	}
 

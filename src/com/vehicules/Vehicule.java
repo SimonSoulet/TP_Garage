@@ -56,7 +56,7 @@ public class Vehicule implements Serializable {
 	}
 	
 	public String toString() { //Description détaillée du véhicule (Methode appelé qui s'ecriera dans le fichier Garage.txt)
-		String str = "\tNouvelle voiture "+getMarque()+" : "+getNom()+" avec "+moteur.toString()+" ("+getPrix()+"€)";
+		String str = "\n\tNouvelle voiture "+getMarque()+" : "+getNom()+" avec "+moteur.toString()+" ("+getPrix()+"€)";
 		return str;
 		
 	}
