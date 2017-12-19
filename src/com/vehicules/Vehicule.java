@@ -46,6 +46,15 @@ public class Vehicule implements Serializable {
 		return nomMarque;
 	}
 	
+	public double getPrixTotalOptions() {
+		double PrixTotalOptions = 0;
+		for(int i = 0; i < this.Options.size(); i++) {
+			PrixTotalOptions += this.Options.get(i).getPrix();
+		}
+		
+		return PrixTotalOptions;
+	}
+	
 	//Setteur
 	public void setMoteur(Moteur moteur) {
 		this.moteur = moteur;
@@ -56,8 +65,18 @@ public class Vehicule implements Serializable {
 	}
 	
 	public String toString() { //Description détaillée du véhicule (Methode appelé qui s'ecriera dans le fichier Garage.txt)
-		String str = "\n\tNouvelle voiture "+getMarque()+" : "+getNom()+" avec "+moteur.toString()+" ("+getPrix()+"€)";
-		return str;
+		String str = "Nouvelle voiture "+getMarque()+" : "+getNom()+" avec "+moteur.toString()+" ("+getPrix()+"€)";
+		
+		String str2 = "";
+		int i = 0;
+		for(OptionsVehicule o : getOptions()) {
+			i++;
+			str2 += " ["+o.TypeOption()+" ("+o.getPrix()+"€)";
+		}
+		
+		double PrixTotal = this.getPrix() + this.getPrixTotalOptions();
+		
+		return str+str2+" ] d'une valeur totale de "+PrixTotal+"€ \n";
 		
 	}
 
