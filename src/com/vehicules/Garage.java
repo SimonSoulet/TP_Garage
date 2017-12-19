@@ -28,7 +28,7 @@ public class Garage {
 		ObjectInputStream ois;   
 		ObjectOutputStream oos; //On déclare les objets en dehors du bloc try/catch
 		
-		String file = "Garage.txt";
+		//String file = "Garage.txt";
 		
 		try {
 			oos = new ObjectOutputStream(
@@ -54,18 +54,23 @@ public class Garage {
 			System.out.println("      Garage");
 			System.out.println("********************");
 			
-			while (file != "") {
+			//while (file != "") {
 				
 					try {
 					
-					System.out.println(((Vehicule)ois.readObject()).toString());
+					System.out.println((ois.readObject()).toString());
+					System.out.println((ois.readObject()).toString());
+					System.out.println((ois.readObject()).toString());
+					System.out.println((ois.readObject()).toString());
+					System.out.println((ois.readObject()).toString());
+					System.out.println((ois.readObject()).toString());
 				
 					}catch (ClassNotFoundException e) {
 						e.printStackTrace();
 					}
 			
 				ois.close(); //On ferme le flux
-			}
+			//}
 			
 			}catch (FileNotFoundException e) {
 				e.printStackTrace();
