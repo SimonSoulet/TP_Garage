@@ -34,9 +34,9 @@ public class Garage {
 			oos = new ObjectOutputStream(
 					 new BufferedOutputStream(
 							new FileOutputStream(
-									new File("Garage.txt"))));
+									new File("Garage.ser"))));
 			
-		//On écrit la descirpiton des véhicules dans le fichier
+		//On écrit la description des véhicules dans le fichier
 			for (Vehicule V : Voitures) {
 				oos.writeObject(V.toString());
 			}
@@ -48,7 +48,7 @@ public class Garage {
 			ois = new ObjectInputStream(
 					new BufferedInputStream(
 							new FileInputStream(
-									new File("Garage.txt"))));
+									new File("Garage.ser"))));
 			
 			System.out.println("********************");
 			System.out.println("      Garage");
