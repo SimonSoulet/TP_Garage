@@ -25,8 +25,8 @@ public class Garage {
 		Voitures.add(voit); //On ajoute un véhicule à cette liste
 		
 		//On ecrit la description des véhicules dans un fichier Garage.txt
-		ObjectInputStream ois;   
-		ObjectOutputStream oos; //On déclare les objets en dehors du bloc try/catch
+		ObjectInputStream ois = null;   
+		ObjectOutputStream oos = null; //On déclare les objets en dehors du bloc try/catch
 		
 		//String file = "Garage.txt";
 		
@@ -77,6 +77,21 @@ public class Garage {
 			
 			}catch (IOException e) {
 				e.printStackTrace();
+			}finally {
+				try {
+					if(oos != null) {
+						oos.close();
+					}
+				}catch (IOException e) {
+					e.printStackTrace();
+				}
+				try {
+					if(ois != null) {
+						ois.close();
+					}
+				}catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 				
 		}
