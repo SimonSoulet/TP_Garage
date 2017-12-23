@@ -3,11 +3,13 @@ package com.options;
 public class SiegeChauffant implements OptionsVehicule {
 	
 	public double getPrix() {
-		return 562.9;
+		double prix = 562.9;
+		return prix;
 	}
 	
 	public String TypeOption() {
-		return "Sièges chauffants";
+		String type = "Sièges chauffants";
+		return type;
 	}
 
 }

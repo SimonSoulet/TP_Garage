@@ -3,11 +3,13 @@ package com.options;
 public class BarreDeToit implements OptionsVehicule {
 	
 	public double getPrix() {
-		return 29.9;
+		double prix = 29.9;
+		return prix;
 	}
 	
 	public String TypeOption() {
-		return "Barre de toit";
+		String type = "Barre de toit";
+		return type;
 	}
 
 }

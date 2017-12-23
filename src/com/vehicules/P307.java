@@ -6,18 +6,8 @@ public class P307 extends Vehicule {
 	
 	public P307() {
 		super();
+		this.prix = 28457.0;
+		this.nom = "307";
+		this.nomMarque = MarqueVehicule.Peugeot;
 	}
-	
-	public MarqueVehicule getMarque() {
-		return MarqueVehicule.Peugeot;
-	}
-	
-	public double getPrix() {
-		return 28457.0;
-	}
-	
-	public String getNom() {
-		return "307";
-	}
-	
 }

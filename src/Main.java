@@ -39,7 +39,7 @@ public class Main {
 	   	 DS3_1.addOption(new BarreDeToit());
 	   	 DS3_1.addOption(new Climatisation());
 	   	 DS3_1.addOption(new GPS());
-	   	 garage.addVoiture(DS3_1);   	 
+	   	 garage.addVoiture(DS3_1);  
 	   	 
 	   	 Vehicule lag2 = new Laguna();
 	   	 lag2.setMoteur(new MoteurDiesel("500 Hdi", 456987d));
@@ -58,9 +58,10 @@ public class Main {
 	   	 DS3_2.addOption(new Climatisation());
 	   	 DS3_2.addOption(new GPS());
 	   	 DS3_2.addOption(new VitresElectriques());
-	   	 garage.addVoiture(DS3_2);   			 
+	   	 garage.addVoiture(DS3_2);
+	   	 
+	   	 garage.saveVoitures();
+	   	 garage.read();
 	    }
-
-
 	}
 

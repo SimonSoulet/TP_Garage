@@ -6,18 +6,8 @@ public class DS3 extends Vehicule {
 	
 	public DS3() {
 		super();
+		this.prix = 25147.0;
+		this.nom = "DS3";
+		this.nomMarque = MarqueVehicule.Citroën;
 	}
-	
-	public MarqueVehicule getMarque() {
-		return MarqueVehicule.Citroën;
-	}
-	
-	public double getPrix() {
-		return 25147.0;
-	}
-	
-	public String getNom() {
-		return "DS3";
-	}
-
 }

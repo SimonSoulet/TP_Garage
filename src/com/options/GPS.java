@@ -3,11 +3,13 @@ package com.options;
 public class GPS implements OptionsVehicule {
 	
 	public double getPrix() {
-		return 113.5;
+		double prix = 113.5;
+		return prix;
 	}
 	
 	public String TypeOption() {
-		return "GPS";
+		String type = "GPS";
+		return type;
 	}
 
 }
