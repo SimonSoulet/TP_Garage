@@ -17,8 +17,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		 Garage garage = new Garage();   
-	   	 System.out.println(garage.toString());
+		 Garage garage = new Garage();
 	   	 
 	   	 Vehicule lag1 = new Laguna();
 	   	 lag1.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
@@ -62,6 +61,7 @@ public class Main {
 	   	 
 	   	 garage.saveVoitures();
 	   	 garage.read();
+	   	 System.out.println(garage.toString());
 	    }
 	}
 

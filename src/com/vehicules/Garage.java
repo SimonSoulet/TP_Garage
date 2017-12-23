@@ -17,12 +17,27 @@ public class Garage {
 	
 	List<Vehicule> Voitures = new ArrayList<Vehicule>(); //On créé une liste de véhicules
 	
-	public String toString() {
+	public Garage() {
 		
-		return "Aucune voiture sauvegardée !";
+		System.out.println("Nouveau Garage, ajoutez-y des voitures !");
 		
 	}
+	
+	public String toString() {
 
+		String str;
+		boolean b = Voitures.isEmpty();
+		
+		if(b == true)
+			str = "Aucune voiture sauvegardée !";
+		else {
+			str = "Il y a "+Voitures.size()+" voitures dans le garage !";
+		}
+		
+		return str;
+		
+	}
+	
 	public void addVoiture(Vehicule voit) { 
 		
 		Voitures.add(voit); 
